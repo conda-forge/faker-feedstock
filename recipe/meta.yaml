@@ -1,17 +1,17 @@
-{%set name = "Faker" %}
-{%set version = "0.7.17" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "49cba0c3df3dac4fe5cf22d1a5799683c572172b9a0e94ec318e359339648a58" %}
-{%set build_num = "0" %}
+{% set name = "Faker" %}
+{% set version = "0.7.17" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "49cba0c3df3dac4fe5cf22d1a5799683c572172b9a0e94ec318e359339648a58" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 
@@ -19,7 +19,7 @@ build:
   entry_points:
     - faker=faker.cli:execute_from_command_line
 
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
