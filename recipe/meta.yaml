@@ -1,8 +1,8 @@
 {% set name = "Faker" %}
-{% set version = "0.7.18" %}
+{% set version = "0.8.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_val = "310b20f3c497a777622920dca314d90f774028d49c7ee7ccfa96ca4b9d9bf429" %}
+{% set hash = "c90e5cae6aa114bcaf17d8f007683b3520df3d31cdf09f3eeeb8ec8e760f9b04" %}
 {% set build = 0 %}
 
 package:
@@ -12,7 +12,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  {{ hash_type }}: {{ hash }}
 
 
 build:
@@ -31,6 +31,7 @@ requirements:
     - python
     - python-dateutil >=2.4
     - six
+    - email_validator ==1.0.2
     - ipaddress  # [py27]
 
 test:
