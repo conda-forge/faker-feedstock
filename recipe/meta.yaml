@@ -1,8 +1,8 @@
 {% set name = "Faker" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.6" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "c90e5cae6aa114bcaf17d8f007683b3520df3d31cdf09f3eeeb8ec8e760f9b04" %}
+{% set hash = "3c98dd04bba667ecfddb77fcd0dfd19b376b258d21beeaf5b95578826e275a83" %}
 {% set build = 0 %}
 
 package:
@@ -32,10 +32,14 @@ requirements:
     - python
     - python-dateutil >=2.4
     - six
-    - email_validator ==1.0.2
+    - text-unidecode
     - ipaddress  # [py27]
 
 test:
+  imports:
+    - faker
+    - faker.utils
+    - faker.providers
   files:
     - run_test.py
   commands:
