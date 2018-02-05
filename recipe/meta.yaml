@@ -3,7 +3,7 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "c90e5cae6aa114bcaf17d8f007683b3520df3d31cdf09f3eeeb8ec8e760f9b04" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -32,8 +32,8 @@ requirements:
     - python
     - python-dateutil >=2.4
     - six
-    - email_validator ==1.0.2
     - ipaddress  # [py27]
+    - text-unidecode
 
 test:
   files:
@@ -42,6 +42,10 @@ test:
     - faker --help  # [osx]
     - PYTHONIOENCODING=utf8 faker --help  # [linux]
     - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
+  requires:
+    - email_validator>=1.0.0,<1.1.0
+    - ukpostcodeparser>=1.1.1
+    - mock
 
 about:
   home: https://faker.readthedocs.io
