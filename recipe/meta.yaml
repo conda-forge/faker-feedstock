@@ -1,9 +1,8 @@
 {% set name = "Faker" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.12" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "c90e5cae6aa114bcaf17d8f007683b3520df3d31cdf09f3eeeb8ec8e760f9b04" %}
-{% set build = 1 %}
+{% set hash = "9cc12b821f32ff45f6edfdc1ab7be3893b60b1224e952d68322a57e5b26a4a15" %}
 
 package:
   name: {{ name|lower }}
@@ -20,7 +19,7 @@ build:
   entry_points:
     - faker = faker.cli:execute_from_command_line
 
-  number: {{ build }}
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
