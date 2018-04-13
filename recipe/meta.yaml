@@ -1,8 +1,8 @@
 {% set name = "Faker" %}
-{% set version = "0.8.12" %}
+{% set version = "0.8.13" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "9cc12b821f32ff45f6edfdc1ab7be3893b60b1224e952d68322a57e5b26a4a15" %}
+{% set hash = "48fed4b4a191e2b42ad20c14115f1c6d36d338b80192075d7573f0f42d7fb321" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 
@@ -20,19 +20,19 @@ build:
     - faker = faker.cli:execute_from_command_line
 
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
     - python-dateutil >=2.4
-    - six
+    - six >=1.10
+    - text-unidecode ==1.2
     - ipaddress  # [py27]
-    - text-unidecode
 
 test:
   files:
