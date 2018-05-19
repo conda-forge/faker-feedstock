@@ -14,12 +14,15 @@ Summary: Faker is a Python package that generates fake data for you.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/faker-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/faker-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/faker-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/faker-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/faker/badges/version.svg)](https://anaconda.org/conda-forge/faker)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/faker/badges/downloads.svg)](https://anaconda.org/conda-forge/faker)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-faker-green.svg)](https://anaconda.org/conda-forge/faker) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/faker.svg)](https://anaconda.org/conda-forge/faker) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/faker.svg)](https://anaconda.org/conda-forge/faker) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/faker.svg)](https://anaconda.org/conda-forge/faker) |
 
 Installing faker
 ================
