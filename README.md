@@ -14,8 +14,9 @@ Summary: Faker is a Python package that generates fake data for you.
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/faker-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/faker-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/faker-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/faker-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/faker-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/faker-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/faker-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/faker-feedstock/branch/master)
 
 Current release info
 ====================
