@@ -1,8 +1,8 @@
 {% set name = "Faker" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "f6d67f04abfb2b4bea7afc7fa6c18cf4c523a67956e455668be9ae42bccc21ad" %}
+{% set hash = "c2ce42dd8361e6d392276006d757532562463c8642b1086709584200b7fd7758" %}
 
 package:
   name: {{ name|lower }}
