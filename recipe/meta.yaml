@@ -30,8 +30,7 @@ test:
   files:
     - run_test.py
   commands:
-    - faker --help  # [osx]
-    - PYTHONIOENCODING=utf8 faker --help  # [linux]
+    - PYTHONIOENCODING=utf8 faker --help  # [not win]
     - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
 
 about:
