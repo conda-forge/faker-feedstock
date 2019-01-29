@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: faker
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/F/Faker/Faker-{{ version }}.tar.gz
-  sha256: 52a3dcc6a565b15fe1c95090321756d5a8a7c1caf5ab3df2f573ed70936ff518
+  sha256: d871ea315b2dcba9138b8344f2c131a76ac62d6227ca39f69b0c889fec97376c
 
 build:
   entry_points:
     - faker = faker.cli:execute_from_command_line
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
