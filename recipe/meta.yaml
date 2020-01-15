@@ -9,22 +9,20 @@ source:
   sha256: 1b1a58961683b30c574520d0c739c4443e0ef6a185c04382e8cc888273dbebed
 
 build:
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
   entry_points:
     - faker = faker.cli:execute_from_command_line
-  number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
     - pytest-runner
   run:
-    - python
+    - python >=3
     - python-dateutil >=2.4
-    - six >=1.10
-    - text-unidecode ==1.2
-    - ipaddress  # [py27]
+    - text-unidecode ==1.3
 
 test:
   files:
