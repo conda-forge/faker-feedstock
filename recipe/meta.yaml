@@ -9,8 +9,9 @@ source:
   sha256: 1b1a58961683b30c574520d0c739c4443e0ef6a185c04382e8cc888273dbebed
 
 build:
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   number: 0
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - faker = faker.cli:execute_from_command_line
 
