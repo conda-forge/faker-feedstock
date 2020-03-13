@@ -1,4 +1,4 @@
-{% set version = "4.0.1" %}
+{% set version = "4.0.2" %}
 
 package:
   name: faker
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/F/Faker/Faker-{{ version }}.tar.gz
-  sha256: 440d68fe0e46c1658b1975b2497abe0c24a7f772e3892253f31e713ffcc48965
+  sha256: 2d3f866ef25e1a5af80e7b0ceeacc3c92dec5d0fdbad3e2cb6adf6e60b22188f
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - faker = faker.cli:execute_from_command_line
 
@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: 'Faker is a Python package that generates fake data for you'
+  summary: Faker is a Python package that generates fake data for you
   dev_url: https://github.com/joke2k/faker
   doc_url: https://faker.readthedocs.io
 
