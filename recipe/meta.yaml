@@ -1,4 +1,4 @@
-{% set version = "4.0.3" %}
+{% set version = "4.1.0" %}
 
 package:
   name: faker
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/F/Faker/Faker-{{ version }}.tar.gz
-  sha256: 7292806948ed848f1bcea1e7b963bae6f398687d1da0ea096e156fea2787f454
+  sha256: 103c46b9701a151299c5bffe6fefcd4fb5fb04c3b5d06bee4952d36255d44ea2
 
 build:
   number: 0
@@ -33,7 +33,6 @@ test:
     - pip check
     - PYTHONIOENCODING=utf8 faker --help  # [not win]
     - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
-  
 about:
   home: https://faker.readthedocs.io
   license: MIT
