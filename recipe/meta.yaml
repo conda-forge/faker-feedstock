@@ -1,19 +1,21 @@
-{% set version = "9.9.1" %}
+{% set name = "faker" %}
+{% set version = "10.0.0" %}
+
 
 package:
-  name: faker
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/F/Faker/Faker-{{ version }}.tar.gz
-  sha256: e488a3ff8ca20c82d959bb0fedcdb9db52e5cb8483df7a01a15ae3f415b8a6ed
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Faker-{{ version }}.tar.gz
+  sha256: 530690ad12a2a054071af95fc8a354c5fd57b5e7707053a9662f40f14a87b68e
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - faker = faker.cli:execute_from_command_line
+    - faker=faker.cli:execute_from_command_line
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -26,14 +28,15 @@ requirements:
     - typing-extensions >=3.10.0.2
 
 test:
-  requires:
-    - pip
-  files:
-    - run_test.py
+  imports:
+    - faker
+    - faker.contrib
   commands:
     - pip check
-    - PYTHONIOENCODING=utf8 faker --help  # [not win]
-    - SET "PYTHONIOENCODING=utf8" & faker --help  # [win]
+    - faker --help
+  requires:
+    - pip
+
 about:
   home: https://faker.readthedocs.io
   license: MIT
