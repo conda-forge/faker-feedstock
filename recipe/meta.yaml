@@ -11,7 +11,7 @@ source:
   sha256: 530690ad12a2a054071af95fc8a354c5fd57b5e7707053a9662f40f14a87b68e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - faker=faker.cli:execute_from_command_line
