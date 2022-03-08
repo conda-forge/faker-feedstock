@@ -117,7 +117,7 @@ import faker.providers.person.bg_BG
 import faker.providers.person.cs_CZ
 import faker.providers.person.de_AT
 import faker.providers.person.de_DE
-import faker.providers.person.dk_DK
+import faker.providers.person.da_DK
 import faker.providers.person.el_GR
 import faker.providers.person.en
 import faker.providers.person.en_GB
@@ -153,7 +153,7 @@ import faker.providers.phone_number.bg_BG
 import faker.providers.phone_number.bs_BA
 import faker.providers.phone_number.cs_CZ
 import faker.providers.phone_number.de_DE
-import faker.providers.phone_number.dk_DK
+import faker.providers.phone_number.da_DK
 import faker.providers.phone_number.el_GR
 import faker.providers.phone_number.en_AU
 import faker.providers.phone_number.en_CA
