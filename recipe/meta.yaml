@@ -24,7 +24,7 @@ requirements:
   run:
     - python >=3.6
     - python-dateutil >=2.4
-    - typing-extensions >=3.10.0.2
+    - typing-extensions >=3.7.4.3
 
 test:
   imports:
