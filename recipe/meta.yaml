@@ -11,7 +11,7 @@ source:
   sha256: fab78f435d27fa7bd109b095eea3504477e4149051c903fd63f11ce252e3d9b7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - faker=faker.cli:execute_from_command_line
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - python >=3.8
     - python-dateutil >=2.4
     - typing-extensions >=3.10.0.1
 
