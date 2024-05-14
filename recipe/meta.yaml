@@ -1,7 +1,6 @@
 {% set name = "faker" %}
 {% set version = "25.2.0" %}
 
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -11,11 +10,11 @@ source:
   sha256: 45b84f47ff1ef86e3d1a8d11583ca871ecf6730fad0660edadc02576583a2423
 
 build:
-  number: 0
-  noarch: python
   entry_points:
     - faker=faker.cli:execute_from_command_line
-  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
@@ -24,12 +23,10 @@ requirements:
   run:
     - python >=3.8
     - python-dateutil >=2.4
-    - typing-extensions >=3.10.0.1
 
 test:
   imports:
     - faker
-    - faker.contrib
   commands:
     - pip check
     - faker --help
