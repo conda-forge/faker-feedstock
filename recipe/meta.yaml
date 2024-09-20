@@ -1,5 +1,5 @@
 {% set name = "faker" %}
-{% set version = "28.4.1" %}
+{% set version = "29.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4294d169255a045990720d6f3fa4134b764a4cdf46ef0d3c7553d2506f1adaa1
+  sha256: 34e89aec594cad9773431ca479ee95c7ce03dd9f22fda2524e2373b880a2fa77
 
 build:
   entry_points:
