@@ -23,7 +23,6 @@ requirements:
     - pip
   run:
     - typing_extensions
-    - typing-extensions
     - python >=3.8
     - python-dateutil >=2.4
 
