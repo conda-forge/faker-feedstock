@@ -1,6 +1,6 @@
 {% set python_min = python_min|default("3.8") %}
 {% set name = "faker" %}
-{% set version = "32.1.0" %}
+{% set version = "33.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: aac536ba04e6b7beb2332c67df78485fc29c1880ff723beac6d1efd45e2f10f5
+  sha256: 9b01019c1ddaf2253ca2308c0472116e993f4ad8fc9905f82fa965e0c6f932e9
 
 build:
   entry_points:
