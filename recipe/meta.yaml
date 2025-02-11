@@ -23,10 +23,8 @@ requirements:
     - setuptools
     - pip
   run:
-    - tzdata
-    - typing_extensions
     - python >={{ python_min }}
-    - python-dateutil >=2.4
+    - python-tzdata
 
 test:
   imports:
