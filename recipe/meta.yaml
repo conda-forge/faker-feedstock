@@ -1,5 +1,5 @@
 {% set name = "faker" %}
-{% set version = "36.1.0" %}
+{% set version = "36.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f40510350aecfe006f45cb3f8879b35e861367cf347f51a7f2ca2c0571fdcc0b
+  sha256: 7cb2bbd4c8f040e4a340ae4019e9a48b6cf1db6a71bda4e5a61d8d13b7bef28d
 
 build:
   entry_points:
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - pip
   run:
+    - tzdata
     - python >={{ python_min }}
     - python-tzdata
 
