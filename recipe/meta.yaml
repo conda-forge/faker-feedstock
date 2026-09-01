@@ -1,5 +1,5 @@
 {% set name = "faker" %}
-{% set version = "40.37.0" %}
+{% set version = "40.38.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a92dff7f310e61fb544c61720e15edb2e7448bc33d15a321a99e9ab7b94abf54
+  sha256: 72e421098664edf38478f4269a5d5a539337de5da18883ce67cb1e6bb96b0b3a
 
 build:
   entry_points:
