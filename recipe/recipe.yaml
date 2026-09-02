@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  version: "40.38.0"
+
+package:
+  name: faker
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/f/faker/faker-${{ version }}.tar.gz
+  sha256: 72e421098664edf38478f4269a5d5a539337de5da18883ce67cb1e6bb96b0b3a
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  python:
+    entry_points:
+      - faker=faker.cli:execute_from_command_line
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - tzdata
+    - python-tzdata
+
+tests:
+  - python:
+      imports:
+        - faker
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - faker --help
+
+about:
+  summary: Faker is a Python package that generates fake data for you.
+  license: MIT
+  license_file: LICENSE.txt
+  homepage: https://github.com/joke2k/faker
+  documentation: http://faker.rtfd.org/
+
+extra:
+  recipe-maintainers:
+    - ocefpaf
