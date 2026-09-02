@@ -3,15 +3,13 @@ About faker-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/faker-feedstock/blob/main/LICENSE.txt)
 
-Home: https://faker.readthedocs.io
+Home: https://github.com/joke2k/faker
 
 Package license: MIT
 
-Summary: Faker is a Python package that generates fake data for you
+Summary: Faker is a Python package that generates fake data for you.
 
-Development: https://github.com/joke2k/faker
-
-Documentation: https://faker.readthedocs.io
+Documentation: http://faker.rtfd.org/
 
 Current build status
 ====================
@@ -193,5 +191,4 @@ Feedstock Maintainers
 =====================
 
 * [@ocefpaf](https://github.com/ocefpaf/)
-* [@pmlandwehr](https://github.com/pmlandwehr/)
 
