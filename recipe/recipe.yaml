@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "40.42.0"
+  version: "40.43.0"
 
 package:
   name: faker
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/f/faker/faker-${{ version }}.tar.gz
-  sha256: cb6b0b7f6afb7e3225aab89a5803c54ffd63dc0593762763ffb06ae5b75aa77d
+  sha256: 02fae4327c03a4a6315e1b428a3878f435bfc276c93435ea349b95c0c9372361
 
 build:
   number: 0
